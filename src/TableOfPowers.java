@@ -17,13 +17,25 @@ public class TableOfPowers {
 			
 			
 			
-			String title = "Number \t Squared \t Cubed";
+			String title = "Number \t Squared  Cubed";
 			
 			System.out.println(title);
-			System.out.println("===============================");
+			System.out.println("=========================");
 			for(int i = 1; i <= userInt; i++) {
-				System.out.println(i + " " + (i * i) + " " + (i * i * i));
+				System.out.println(i + "\t" + (i * i) + "\t" + (i * i * i));
 			}
+			
+			
+			
+			//multiplication table
+			for(int i = 1; i < userInt + 1; i++) {
+				System.out.println();
+				for(int j = 1; j <= userInt; j++) {
+					System.out.print(i * j + "\t");
+				}
+			}
+			
+			
 			
 			System.out.println("");
 			System.out.println("Would you like to continue? (y/n): ");
@@ -36,6 +48,8 @@ public class TableOfPowers {
 		scnr.close();
 	}
 	
+	
+	//CodingBat nearHundred
 	public boolean nearHundred(int n) {
 		  return ((Math.abs(100 - n) <= 10) ||
 		    (Math.abs(200 - n) <= 10));
